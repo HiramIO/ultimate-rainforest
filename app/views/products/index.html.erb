@@ -1,7 +1,7 @@
 <h1> Products </h1>
 <%= link_to "New Product", new_product_path %>
 <% @products.each do |p| %>
-<h3><%= link_to p.name, "/products/#{p.id}" %></h3> <p>$ <%= p.price_in_cents %></p>
+<h3><%= link_to p.name, "/products/#{p.id}" %></h3> <p>$ <%= p.formatted_price %></p>
 <h5><%= p.description %></h5>
 
 <br>
