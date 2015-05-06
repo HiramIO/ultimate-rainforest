@@ -1,9 +1,11 @@
-<h1> Products </h1>
-<%= link_to "New Product", new_product_path %>
+<h1 id="title"> Rainforest </h1>
+<%= link_to "New Product", new_product_path, class:'button' %>
 <% @products.each do |p| %>
-<h3><%= link_to p.name, "/products/#{p.id}" %></h3> <p>$ <%= p.formatted_price %></p>
+<div class="container">
+<div class="products">
+<h2><%= link_to p.name, "/products/#{p.id}" %></h2> <p>$ <%= p.formatted_price %></p>
 <h5><%= p.description %></h5>
-
+</div>
+</div>
 <br>
-
 <% end %>
